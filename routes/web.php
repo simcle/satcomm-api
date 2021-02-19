@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
+Route::get('/foo', function () {
+    Artisan::call('config:clear');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
