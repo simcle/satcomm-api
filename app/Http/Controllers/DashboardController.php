@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $user_id = Auth::user()->id;
+        $user_id = 1;
         $data = DB::table('measurements')
             ->select(DB::raw('avg(ph) as ph, avg(tmp) as tmp, avg(cod) as cod, avg(tss) as tss, avg(debit) as debit'))
             ->where('user_id',$user_id)
