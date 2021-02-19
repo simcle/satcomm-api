@@ -16,7 +16,7 @@ class ReportController extends Controller
         $date = $request->date;
         $label = $request->label;
 
-        $user_id = Auth::user()->id;
+        $user_id = 1;
         $data = DB::table('measurements')
             ->where('user_id',$user_id)
             ->orderBy('id','DESC');

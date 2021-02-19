@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class MeasurementController extends Controller
 {
     public function index() {
-        $user_id = Auth::user()->id;
+        $user_id = 1;
         $data = DB::table('measurements')
             ->where('user_id',$user_id)
             ->orderBy('id','DESC')
