@@ -30,7 +30,7 @@ class MeasurementController extends Controller
         $data->debit    = $request['debit'];
         $data->save();
 
-        return response()->json(["SUCCESS"])
+        return response()->json(["SUCCESS"]);
     }
 
 }
