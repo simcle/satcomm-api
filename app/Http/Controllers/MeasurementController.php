@@ -29,6 +29,8 @@ class MeasurementController extends Controller
         $data->nh3n     = $request['nh3n'];
         $data->debit    = $request['debit'];
         $data->save();
+
+        return response()->json(["SUCCESS"])
     }
 
 }
