@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('reset-password', 'ResetPasswordController@sendPasswordResetLink');
-Route::post('/measuring','MeasurementController@store');
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('me','Auth\MeController');
     Route::get('dashboard','DashboardController@index');
+    Route::post('/measuring','MeasurementController@store');
     Route::get('sparing','MeasurementController@index');
     Route::get('report','ReportController@index');
     Route::get('report/export','ReportController@export');
